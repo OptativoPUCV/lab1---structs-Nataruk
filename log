@@ -3,3 +3,91 @@ Thu 17 Aug 2023 08:13:33 PM UTC:
  tests:  0|7
 total_score: 0/70
 a8c1adb
+Thu 17 Aug 2023 08:15:57 PM UTC: 
+ exercises.c | 117 +++++++++++++++++++++++++++++++++++++++++++++++++++++++-----
+ 1 file changed, 108 insertions(+), 9 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:39:5: error: ‘vector’ undeclared (first use in this function)
+   39 |     vector[sizeCopy] = arr[i];
+      |     ^~~~~~
+exercises.c:39:5: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:36:7: error: unused variable ‘vectorCopy’ [-Werror=unused-variable]
+   36 |   int vectorCopy[size]; // vector auxiliar
+      |       ^~~~~~~~~~
+exercises.c: In function ‘checkSorted’:
+exercises.c:111:27: error: expected ‘;’ before ‘)’ token
+  111 |   for(int j = 0;j < size-1){
+      |                           ^
+      |                           ;
+exercises.c:112:12: error: ‘i’ undeclared (first use in this function)
+  112 |     if(arr[i] > arr[i+1]){
+      |            ^
+exercises.c: In function ‘inicializarLibro’:
+exercises.c:140:25: error: passing argument 2 of ‘strcpy’ makes pointer from integer without a cast [-Werror=int-conversion]
+  140 |   strcpy(libro->titulo, *titulo);
+      |                         ^~~~~~~
+      |                         |
+      |                         char
+In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/features.h:490,
+                 from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/ctype.h:25,
+                 from exercises.c:1,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/bits/string_fortified.h:77:1: note: expected ‘const char * restrict’ but argument is of type ‘char’
+   77 | __NTH (strcpy (char *__restrict __dest, const char *__restrict __src))
+      | ^~~~~
+In file included from test.c:1:
+exercises.c:141:22: error: invalid type argument of ‘->’ (have ‘Autor’)
+  141 |   strcpy(libro->autor->nombre, *nombreAutor);
+      |                      ^~
+exercises.c:141:32: error: passing argument 2 of ‘strcpy’ makes pointer from integer without a cast [-Werror=int-conversion]
+  141 |   strcpy(libro->autor->nombre, *nombreAutor);
+      |                                ^~~~~~~~~~~~
+      |                                |
+      |                                char
+In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/features.h:490,
+                 from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/ctype.h:25,
+                 from exercises.c:1,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/bits/string_fortified.h:77:1: note: expected ‘const char * restrict’ but argument is of type ‘char’
+   77 | __NTH (strcpy (char *__restrict __dest, const char *__restrict __src))
+      | ^~~~~
+In file included from test.c:1:
+exercises.c:142:15: error: invalid type argument of ‘->’ (have ‘Autor’)
+  142 |   libro->autor->anioNacimiento = anioNacimiento;
+      |               ^~
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:168:35: error: expected ‘{’ before ‘*’ token
+  168 |     struct nodo newNode = (struct *nodo) malloc(sizeof(struct nodo));
+      |                                   ^
+exercises.c:169:12: error: invalid type argument of ‘->’ (have ‘struct nodo’)
+  169 |     newNode->cabeza = arr[i];
+      |            ^~
+exercises.c:170:12: error: invalid type argument of ‘->’ (have ‘struct nodo’)
+  170 |     newNode->Next = NULL;
+      |            ^~
+exercises.c:173:7: error: ‘cabeza’ undeclared (first use in this function); did you mean ‘Cabeza’?
+  173 |   if (cabeza == NULL){
+      |       ^~~~~~
+      |       Cabeza
+exercises.c:174:14: error: ‘newNode’ undeclared (first use in this function)
+  174 |     cabeza = newNode;
+      |              ^~~~~~~
+exercises.c:178:5: error: ‘actual’ undeclared (first use in this function)
+  178 |     actual->Next = newNode;
+      |     ^~~~~~
+exercises.c:179:14: error: ‘nuevoNodo’ undeclared (first use in this function)
+  179 |     actual = nuevoNodo;
+      |              ^~~~~~~~~
+exercises.c:165:16: error: variable ‘ahora’ set but not used [-Werror=unused-but-set-variable]
+  165 |   struct nodo *ahora = NULL;
+      |                ^~~~~
+exercises.c:164:16: error: unused variable ‘Cabeza’ [-Werror=unused-variable]
+  164 |   struct nodo *Cabeza = NULL;
+      |                ^~~~~~
+exercises.c:183:1: error: control reaches end of non-void function [-Werror=return-type]
+  183 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+3a304ec
