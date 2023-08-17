@@ -165,7 +165,7 @@ Nodo *crearListaEnlazada(int arr[], int size) {
   struct nodo *ahora = NULL;
 
   for (int i = 0; i < size; i++){
-    struct nodo newNode = ( struct nodo) malloc(sizeof(struct *nodo));
+    struct nodo newNode = ( struct nodo) malloc(sizeof(nodo));
     newNode->Cabeza = arr[i];
     newNode->siguiente = NULL;
   }
