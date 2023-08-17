@@ -815,3 +815,21 @@ exercises.c:174:14: error: ‘newNode’ undeclared (first use in this function)
 exercises.c:174:14: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 635d684
+Thu 17 Aug 2023 08:30:31 PM UTC: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:168:62: error: conversion to non-scalar type requested
+  168 |     struct nodo newNode = (struct nodo) malloc(sizeof(struct nodo));
+      |                                                              ^~~~
+exercises.c:168:17: error: variable ‘newNode’ set but not used [-Werror=unused-but-set-variable]
+  168 |     struct nodo newNode = (struct nodo) malloc(sizeof(struct nodo));
+      |                 ^~~~~~~
+exercises.c:174:14: error: ‘newNode’ undeclared (first use in this function)
+  174 |     Cabeza = newNode;
+      |              ^~~~~~~
+exercises.c:174:14: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation failed
+848aa1e
