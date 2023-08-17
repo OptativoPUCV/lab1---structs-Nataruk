@@ -10,13 +10,13 @@ Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y devuelva el valor más grande del arreglo.
 */
 int findMax(int arr[], int size) {
-    int MAYOR = arr[0];  // Inicializar con el primer elemento del arreglo
-    for (int i = 1; i < size; i++) {
-        if (arr[i] > MAYOR) {
-            MAYOR = arr[i];
-        }
+  int MAYOR = arr[0]; // Inicializar con el primer elemento del arreglo
+  for (int i = 1; i < size; i++) {
+    if (arr[i] > MAYOR) {
+      MAYOR = arr[i];
     }
-    return MAYOR;
+  };
+  return MAYOR;
 }
 
 /*
@@ -26,32 +26,32 @@ invierta el orden de sus elementos.
 */
 void reverseArray(int arr[], int size) {
   int inicio = 0;
-    int fin = size - 1;
+  int fin = size - 1;
 
-    while (inicio < fin) {
-        // Intercambiar los elementos en las posiciones start y end
-        int temp = arr[inicio];
-        arr[inicio] = arr[fin];
-        arr[fin] = temp;
+  while (inicio < fin) {
+    // Intercambiar los elementos en las posiciones start y end
+    int temp = arr[inicio];
+    arr[inicio] = arr[fin];
+    arr[fin] = temp;
 
-        // Mover los índices
-        inicio--;
-        fin++;
-    }
+    // Mover los índices
+    inicio--;
+    fin++;
+  }
 }
-  
+
 /*
 Ejercicio 3: Filtrar Números Pares
 Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
 */
-int *filterEvenNumbers(int arr[], int size, int *newSize) { 
+int *filterEvenNumbers(int arr[], int size, int *newSize) {
   int contador;
   int *newArr;
-  for (int i = 0; i < size; i++){
-    if (arr[i] % 2 == 0){
-      contador ++;
+  for (int i = 0; i < size; i++) {
+    if (arr[i] % 2 == 0) {
+      contador++;
       newArr[i] = arr[i];
     }
   }
@@ -65,27 +65,27 @@ Descripción: Escribe una función que tome dos arreglos
 ordenados y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado.
 */
-void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[]) {
+void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
+                       int result[]) {
   int totalSize, aux = 0;
   totalSize = size1 + size2;
 
-  for (int i = 0; i < size1; i++){
+  for (int i = 0; i < size1; i++) {
     result[i] = arr1[i];
   }
-  for (int j = size1; j < totalSize; j++){
+  for (int j = size1; j < totalSize; j++) {
     result[j] = arr2[j];
   }
-// bubblesort para ordenar el arreglo grande
-  for(int i = 0; i < totalSize; i++){
-    for(int j = 0; j < totalSize; j++){
-      if(result[j] > result[j+1]){
+  // bubblesort para ordenar el arreglo grande
+  for (int i = 0; i < totalSize; i++) {
+    for (int j = 0; j < totalSize; j++) {
+      if (result[j] > result[j + 1]) {
         aux = result[j];
-        result[j] = result[j+1];
-        result[j+1] = aux;
+        result[j] = result[j + 1];
+        result[j + 1] = aux;
       }
     }
   }
-  
 }
 
 /*
@@ -94,20 +94,20 @@ Descripción: Escribe una función que tome un arreglo y su tamaño,
 y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
-int checkSorted(int arr[], int size) { 
+int checkSorted(int arr[], int size) {
   int resultado = 0;
-  for (int i = 0; i < size-1; i++){
-    if(arr[i] < arr[i+1]){
+  for (int i = 0; i < size - 1; i++) {
+    if (arr[i] < arr[i + 1]) {
       resultado = 1;
     }
   }
-  for(int j = 0;j < size-1; j++){
-    if(arr[j] > arr[j+1]){
+  for (int j = 0; j < size - 1; j++) {
+    if (arr[j] > arr[j + 1]) {
       resultado = -1;
     }
   }
-  
-  return resultado; 
+
+  return resultado;
 }
 
 /*
@@ -129,7 +129,8 @@ typedef struct {
   int anioPublicacion;
 } Libro;
 
-void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor, int anioNacimiento, int anioPublicacion) {
+void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
+                      int anioNacimiento, int anioPublicacion) {
   /*
   strcpy(libro->titulo, titulo);
   strcpy(libro->autor.nombre, nombreAutor);
@@ -154,8 +155,7 @@ typedef struct nodo {
   struct nodo *siguiente; // puntero al siguiente nodo
 } Nodo;
 
-
-Nodo *crearListaEnlazada(int arr[], int size) { 
+Nodo *crearListaEnlazada(int arr[], int size) {
   /*
   struct nodo *Cabeza = NULL;
   struct nodo *ahora = NULL;
