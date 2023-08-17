@@ -1144,3 +1144,17 @@ Thu 17 Aug 2023 09:01:13 PM UTC:
  1 file changed, 1 insertion(+)
  tests:  0|0
 630e5d0
+Thu 17 Aug 2023 09:04:18 PM UTC: 
+ exercises.c | 18 +++++++-----------
+ 1 file changed, 7 insertions(+), 11 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:29:7: error: variable ‘vector’ set but not used [-Werror=unused-but-set-variable]
+   29 |   int vector[size];
+      |       ^~~~~~
+exercises.c:28:7: error: unused variable ‘inicio’ [-Werror=unused-variable]
+   28 |   int inicio = 0, sizeCopy;
+      |       ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7824082
