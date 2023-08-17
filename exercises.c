@@ -47,16 +47,16 @@ y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize) {
-  int contador;
-  int *newArr;
-  for (int i = 0; i < size; i++) {
-    if (arr[i] % 2 == 0) {
-      contador++;
-      newArr[i] = arr[i];
-    }
-  }
-  *newSize = contador;
-  return newArr;
+  // int contador;
+  // int *newArr;
+  // for (int i = 0; i < size; i++) {
+  //   if (arr[i] % 2 == 0) {
+  //     contador++;
+  //     newArr[i] = arr[i];
+  //   }
+  // }
+  // *newSize = contador;
+  // return newArr;
 }
 
 /*

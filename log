@@ -1128,3 +1128,14 @@ exercises.c:58:12: error: ‘contador’ may be used uninitialized in this funct
 cc1: all warnings being treated as errors
 Compilation failed
 16ce5ad
+Thu 17 Aug 2023 09:00:56 PM UTC: 
+ exercises.c | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:60:1: error: control reaches end of non-void function [-Werror=return-type]
+   60 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+480fdd6
