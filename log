@@ -509,3 +509,36 @@ exercises.c:165:16: error: variable ‘ahora’ set but not used [-Werror=unused
 cc1: all warnings being treated as errors
 Compilation failed
 d207fde
+Thu 17 Aug 2023 08:22:57 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:168:29: error: ‘nodo’ undeclared (first use in this function)
+  168 |     struct nodo newNode = ( nodo*) malloc(sizeof(struct nodo));
+      |                             ^~~~
+exercises.c:168:29: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:168:34: error: expected expression before ‘)’ token
+  168 |     struct nodo newNode = ( nodo*) malloc(sizeof(struct nodo));
+      |                                  ^
+exercises.c:169:12: error: invalid type argument of ‘->’ (have ‘struct nodo’)
+  169 |     newNode->Cabeza = arr[i];
+      |            ^~
+exercises.c:170:12: error: invalid type argument of ‘->’ (have ‘struct nodo’)
+  170 |     newNode->siguiente = NULL;
+      |            ^~
+exercises.c:174:14: error: ‘newNode’ undeclared (first use in this function)
+  174 |     Cabeza = newNode;
+      |              ^~~~~~~
+exercises.c:178:5: error: ‘actual’ undeclared (first use in this function)
+  178 |     actual->Next = newNode;
+      |     ^~~~~~
+exercises.c:179:14: error: ‘nuevoNodo’ undeclared (first use in this function)
+  179 |     actual = nuevoNodo;
+      |              ^~~~~~~~~
+exercises.c:165:16: error: variable ‘ahora’ set but not used [-Werror=unused-but-set-variable]
+  165 |   struct nodo *ahora = NULL;
+      |                ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7183b4b
