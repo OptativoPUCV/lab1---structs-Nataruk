@@ -175,5 +175,5 @@ Nodo *crearListaEnlazada(int arr[], int size) {
     ahora = newNode;
   }
 */
-  return Cabeza;
+  return NULL;//Cabeza;
 }

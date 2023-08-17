@@ -1114,3 +1114,17 @@ exercises.c:179:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 63cf08c
+Thu 17 Aug 2023 09:00:24 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+test.c: In function ‘filterEvenNumbers’:
+exercises.c:59:10: error: ‘newArr’ is used uninitialized [-Werror=uninitialized]
+   59 |   return newArr;
+      |          ^~~~~~
+exercises.c:58:12: error: ‘contador’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   58 |   *newSize = contador;
+      |   ~~~~~~~~~^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+16ce5ad
