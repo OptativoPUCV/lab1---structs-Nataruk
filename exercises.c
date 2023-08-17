@@ -37,8 +37,8 @@ void reverseArray(int arr[], int size) {
         arr[fin] = temp;
 
         // Mover los índices
-        inicio++;
-        fin--;
+        inicio--;
+        fin++;
     }
 }
   
