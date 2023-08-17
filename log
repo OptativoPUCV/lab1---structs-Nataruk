@@ -1169,3 +1169,14 @@ exercises.c:29:7: error: variable ‘vector’ set but not used [-Werror=unused-
 cc1: all warnings being treated as errors
 Compilation failed
 634fe70
+Thu 17 Aug 2023 09:05:01 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:29:7: error: variable ‘vector’ set but not used [-Werror=unused-but-set-variable]
+   29 |   int vector[size];
+      |       ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9b59d6f
