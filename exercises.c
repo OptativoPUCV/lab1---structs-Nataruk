@@ -170,8 +170,8 @@ Nodo *crearListaEnlazada(int arr[], int size) {
     newNode->siguiente = NULL;
   }
 
-  if (cabeza == NULL){
-    cabeza = newNode;
+  if (Cabeza == NULL){
+    Cabeza = newNode;
     ahora = newNode;
   }
   else{
@@ -179,5 +179,5 @@ Nodo *crearListaEnlazada(int arr[], int size) {
     actual = nuevoNodo;
   }
 
-  return cabeza;
+  return Cabeza;
 }
