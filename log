@@ -938,3 +938,25 @@ exercises.c:186:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 8dd9900
+Thu 17 Aug 2023 08:42:33 PM UTC: 
+ exercises.c | 16 ++++++----------
+ 1 file changed, 6 insertions(+), 10 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘findMax’:
+exercises.c:17:19: error: expected ‘;’ before ‘}’ token
+   17 |       indice = i+1
+      |                   ^
+      |                   ;
+   18 |     }
+      |     ~              
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:181:10: error: ‘Cabeza’ undeclared (first use in this function)
+  181 |   return Cabeza;
+      |          ^~~~~~
+exercises.c:181:10: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:182:1: error: control reaches end of non-void function [-Werror=return-type]
+  182 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+3260415

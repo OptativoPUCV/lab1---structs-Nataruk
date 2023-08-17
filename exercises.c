@@ -10,18 +10,14 @@ Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y devuelva el valor más grande del arreglo.
 */
 int findMax(int arr[], int size) { 
-  int auxiliar = 0, MAYOR = 0;
-  for(int i = 0; i < size; i++){
-    for(int j = 0; j < size; j++){
-      if(arr[j] < arr[j+1]){
-        auxiliar = arr[j];
-        arr[j] = arr[j+1];
-        arr[j+1] = auxiliar;
-      }
+  int MAYOR = 0, indice = 0;
+  for(int i = 0; i < size-1; i++){
+    if(arr[i]<arr[i+1]){
+      MAYOR = arr[i+1];
+      indice = i+1
     }
   }
-  
-  MAYOR = arr[size-1];
+  MAYOR = arr[indice];
   return MAYOR; 
 }
 
