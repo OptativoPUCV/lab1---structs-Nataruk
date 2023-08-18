@@ -70,12 +70,13 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[
   int totalSize = size1+size2;
   // meter los dos arreglos en el vector para luego ordenarlo
   for (int i = 0; i < totalSize; i++){
-    if (totalSize < size1){
       result[i] = arr1[i];
-    }else{
-      result[i] = arr2[i];
-    }
   }
+  
+  for (int i = size1; i < totalSize; i++){
+    result[i] = arr2[i];
+  }
+  
 }
 
 /*
