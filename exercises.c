@@ -174,7 +174,7 @@ typedef struct nodo {
 } Nodo;
 
 Nodo *crearListaEnlazada(int arr[], int size) {
-  /*
+  
   struct nodo *Cabeza = NULL;
   struct nodo *ahora = NULL;
 
@@ -192,6 +192,6 @@ Nodo *crearListaEnlazada(int arr[], int size) {
     ahora->siguiente = newNode;
     ahora = newNode;
   }
-*/
-  return NULL;//Cabeza;
+
+  return Cabeza;//Cabeza;
 }

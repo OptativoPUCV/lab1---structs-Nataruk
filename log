@@ -1530,3 +1530,21 @@ Fri 18 Aug 2023 11:21:17 PM UTC:
  tests:  0|1
 total_score: 60/70
 935dda6
+Fri 18 Aug 2023 11:24:19 PM UTC: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:182:62: error: conversion to non-scalar type requested
+  182 |     struct nodo newNode = (struct nodo) malloc(sizeof(struct nodo));
+      |                                                              ^~~~
+exercises.c:182:17: error: variable ‘newNode’ set but not used [-Werror=unused-but-set-variable]
+  182 |     struct nodo newNode = (struct nodo) malloc(sizeof(struct nodo));
+      |                 ^~~~~~~
+exercises.c:188:14: error: ‘newNode’ undeclared (first use in this function)
+  188 |     Cabeza = newNode;
+      |              ^~~~~~~
+exercises.c:188:14: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation failed
+4e5f9e2
