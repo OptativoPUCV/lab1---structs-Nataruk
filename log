@@ -1222,3 +1222,14 @@ exercises.c:55:22: error: ‘contador’ may be used uninitialized in this funct
 cc1: all warnings being treated as errors
 Compilation failed
 c3633ea
+Fri 18 Aug 2023 03:12:59 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:58:11: error: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   58 |   newSize = contador;
+      |           ^
+cc1: all warnings being treated as errors
+Compilation failed
+03431ab
