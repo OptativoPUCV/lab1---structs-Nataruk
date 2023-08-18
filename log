@@ -1186,3 +1186,14 @@ Fri 18 Aug 2023 02:57:17 PM UTC:
  tests:  0|0
 total_score: 20/70
 608a7c3
+Fri 18 Aug 2023 03:12:06 PM UTC: 
+ exercises.c | 23 ++++++++++++-----------
+ 1 file changed, 12 insertions(+), 11 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:58:22: error: ‘contador’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   58 |   *newSize = contador-1;
+      |              ~~~~~~~~^~
+cc1: all warnings being treated as errors
+Compilation failed
+537059a
