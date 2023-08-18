@@ -67,7 +67,7 @@ ordenados y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado.
 */
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[]){
-  int totalSize = size1+size2, contador = 0;
+  int totalSize = size1+size2, contador = 0, auxiliar = 0;
   // meter los dos arreglos en el vector para luego ordenarlo
   for (int i = 0; i < totalSize; i++){
       result[i] = arr1[i];
@@ -77,7 +77,17 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[
     result[i] = arr2[contador];
     contador ++;
   }
-  
+
+  // ordenamiento del arreglo resultante
+  for (int i = 0; i < totalSize; i++){
+    for (int j = 0; j < totalSize; j++){
+      if (result[j] > result[j+1]){
+        auxiliar =  result[j];
+        result[j] = result[j+1];
+        result[j+1] = auxiliar;
+      }
+    }
+  }
 }
 
 /*
