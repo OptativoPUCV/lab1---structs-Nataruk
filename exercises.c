@@ -55,7 +55,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
       newArr[contador-1] = arr[i];
     }
   }
-  *newSize = contador;
+  newSize = contador;
   return newArr;
   
 }
