@@ -150,10 +150,10 @@ typedef struct {
 void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
                       int anioNacimiento, int anioPublicacion) {
   
-  strcpy(libro->titulo, titulo);
-  strcpy(libro->autor.nombre, nombreAutor);
-  libro->autor.anioNacimiento = anioNacimiento;
-  libro->anioPublicacion = anioPublicacion;
+  strcpy(libro->titulo, titulo); // copiamos el título del libro al struct libro, en la sección titulo
+  strcpy(libro->autor.nombre, nombreAutor); // traspasamos el nombre del autor al struct
+  libro->autor.anioNacimiento = anioNacimiento; // traspasamos el año de nacimiento al struct
+  libro->anioPublicacion = anioPublicacion; // traspasamos el año de publicación al struct
   
 }
 
