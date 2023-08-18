@@ -107,10 +107,10 @@ int checkSorted(int arr[], int size) {
     }
   }
 
-  if(ascendente == size){
+  if(ascendente == size-2){
     return -1;
   }
-  if(descendente == size){
+  if(descendente == size-2){
     return 1;
   }
   
