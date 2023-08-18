@@ -97,22 +97,17 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
 int checkSorted(int arr[], int size) {
-  int ascendente = 0, descendente = 0; // tipos de orden
+  //int ascendente = 0, descendente = 0; // tipos de orden
   for (int i = 0; i < size-1; i++){
     if (arr[i] > arr[i+1]){
-      ascendente += 1;
+      return 1;
     }
     else{
-      descendente += 1;
+      return -1;
     }
   }
 
-  if(ascendente == size-1){
-    return -1;
-  }
-  if(descendente == size-1){
-    return 1;
-  }
+  
   
   return 0;
 }
