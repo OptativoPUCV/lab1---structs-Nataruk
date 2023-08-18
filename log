@@ -1412,3 +1412,14 @@ Fri 18 Aug 2023 04:08:36 PM UTC:
  tests:  0|3
 total_score: 40/70
 9bd2379
+Fri 18 Aug 2023 10:46:24 PM UTC: 
+ exercises.c | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:109:7: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  109 |   if (resultado = 1){ //ascendente
+      |       ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+618d1a7
