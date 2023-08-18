@@ -1268,3 +1268,13 @@ Fri 18 Aug 2023 03:37:08 PM UTC:
  tests:  0|3
 total_score: 40/70
 39b9623
+Fri 18 Aug 2023 03:44:40 PM UTC: 
+ exercises.c | 19 ++++++++++++-------
+ 1 file changed, 12 insertions(+), 7 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:102:18: error: expected expression before ‘[’ token
+  102 |     if (arr[i] > [i+1]){
+      |                  ^
+Compilation failed
+074c117
