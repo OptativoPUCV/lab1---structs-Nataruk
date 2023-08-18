@@ -66,25 +66,14 @@ Descripción: Escribe una función que tome dos arreglos
 ordenados y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado.
 */
-void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
-                       int result[]) {
-  int totalSize, aux = 0;
-  totalSize = size1 + size2;
-
-  for (int i = 0; i < size1; i++) {
-    result[i] = arr1[i];
-  }
-  for (int j = size1; j < totalSize; j++) {
-    result[j] = arr2[j];
-  }
-  // bubblesort para ordenar el arreglo grande
-  for (int i = 0; i < totalSize; i++) {
-    for (int j = 0; j < totalSize; j++) {
-      if (result[j] > result[j + 1]) {
-        aux = result[j];
-        result[j] = result[j + 1];
-        result[j + 1] = aux;
-      }
+void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[]){
+  int totalSize = size1+size2;
+  // meter los dos arreglos en el vector para luego ordenarlo
+  for (int i = 0; i < totalSize; i++){
+    if (totalSize < size1){
+      result[i] = arr1[i];
+    }else{
+      result[i] = arr2[i];
     }
   }
 }
