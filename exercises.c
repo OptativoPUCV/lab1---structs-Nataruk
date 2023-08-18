@@ -102,28 +102,22 @@ int checkSorted(int arr[], int size) {
     if (arr[i] <= arr[i+1]){
       resultado = 1;
     }else{
-      return 0;
+      if(resultado == 1){
+        return 0;
+      }else{
+        for(int j = 0; j < size-1; j++){
+          if (arr[i] >= arr[i+1]){
+            resultado = -1;
+          }else{
+            if(resultado == -1){
+              return 0;
+            }
+          }
+        }
+      }
     }
   }
-  if (resultado == 1){ //ascendente
-    return resultado;
-  }
-  if (resultado == -1){ // descendente
-    return resultado;
-  }
-  for (int i = 0; i < size-1; i++){
-    if (arr[i] >=arr[i+1]){
-      resultado = -1;
-    }else{
-      return 0;
-    }
-  }
-  if (resultado == 1){ //ascendente
-    return resultado;
-  }
-  if (resultado == -1){ // descendente
-    return resultado;
-  }
+
 
   return 0;
 }
