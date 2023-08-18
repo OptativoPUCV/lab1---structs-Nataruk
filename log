@@ -1278,3 +1278,17 @@ exercises.c:102:18: error: expected expression before ‘[’ token
       |                  ^
 Compilation failed
 074c117
+Fri 18 Aug 2023 03:44:53 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:113:5: error: ‘descendente’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+  113 |   if(descendente == size-1){
+      |     ^
+exercises.c:110:5: error: ‘ascendente’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+  110 |   if(ascendente == size-1){
+      |     ^
+cc1: all warnings being treated as errors
+Compilation failed
+5108c77
