@@ -107,12 +107,10 @@ int checkSorted(int arr[], int size) {
     }
   }
 
-  if(ascendente == size){
-    printf("%d %d\n", size, ascendente);
+  if(ascendente == size-1){
     return 1;
   }
-  if(descendente == size){
-    printf("%d %d\n", size, descendente);
+  if(descendente == size-1){
     return -1;
   }
   
