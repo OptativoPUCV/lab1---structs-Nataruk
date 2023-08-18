@@ -98,29 +98,30 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 */
 int checkSorted(int arr[], int size) {
 
-  int resultado = 0;
+  int resultado = 0, flag = 0;
   for (int i = 0; i < size-1; i++){
     if (arr[i] <= arr[i+1]){
       resultado = 1;
     }
     else{
-      resultado = 5; // numero de error
+      flag = 1; // numero de error
     }
   }
 
-  if (resultado == 1){
+  if (resultado == 1 && flag == 0){
     return 1;
   }
-
+  
+  flag = 0;
   for (int i = 0; i < size-1; i++){
     if (arr[i] >= arr[i+1]){
       resultado = -1;
     }
     else{
-      resultado = 5; // numero de error
+      flag = 1; // sucedió un cambio
     }
   }
-  if (resultado == -1){
+  if (resultado == -1 && flag == 0){
     return -1;
   }
 
