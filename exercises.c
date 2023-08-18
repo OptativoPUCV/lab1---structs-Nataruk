@@ -101,6 +101,8 @@ int checkSorted(int arr[], int size) {
   for (int i = 0; i < size-1; i++){
     if (arr[i] <= arr[i+1]){
       resultado = 1;
+    }else{
+      return 0;
     }
   }
   if (resultado == 1){ //ascendente
@@ -109,9 +111,6 @@ int checkSorted(int arr[], int size) {
   if (resultado == -1){ // descendente
     return resultado;
   }
-  
-  
-  return resultado;
 }
 
 /*
