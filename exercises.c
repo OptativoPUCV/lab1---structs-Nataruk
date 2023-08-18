@@ -174,24 +174,27 @@ typedef struct nodo {
 } Nodo;
 
 Nodo *crearListaEnlazada(int arr[], int size) {
-  
-  struct nodo *Cabeza = NULL;
-  struct nodo *ahora = NULL;
+    Nodo *Cabeza = NULL;
+    Nodo *ahora = NULL;
 
-  for (int i = 0; i < size; i++){
-    struct nodo newNode = (struct nodo) malloc(sizeof(struct nodo));
-    newNode.numero = arr[i];
-    newNode.siguiente = NULL;
-  }
+    for (int i = 0; i < size; i++) {
+        Nodo *newNode = (Nodo *)malloc(sizeof(Nodo));
+        if (newNode == NULL) {
+            // Manejar error de asignación de memoria
+            return NULL;
+        }
+        newNode->numero = arr[i];
+        newNode->siguiente = NULL;
 
-  if (Cabeza == NULL){
-    Cabeza = newNode;
-    ahora = newNode;
-  }
-  else{
-    ahora->siguiente = newNode;
-    ahora = newNode;
-  }
+        if (Cabeza == NULL) {
+            Cabeza = newNode;
+            ahora = newNode;
+        } else {
+            ahora->siguiente = newNode;
+            ahora = newNode;
+        }
+    }
 
-  return Cabeza;//Cabeza;
+    return Cabeza;
 }
+
