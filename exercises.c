@@ -33,6 +33,9 @@ void reverseArray(int arr[], int size) {
     vector[sizeCopy] = arr[i];
     sizeCopy -= 1;
   }
+  for (int i = 0; i < size; i++){
+    arr[i] = vector[i];
+  }
 
 }
 
