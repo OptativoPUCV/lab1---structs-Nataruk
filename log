@@ -1197,3 +1197,14 @@ exercises.c:58:22: error: ‘contador’ may be used uninitialized in this funct
 cc1: all warnings being treated as errors
 Compilation failed
 537059a
+Fri 18 Aug 2023 03:12:13 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:58:12: error: ‘contador’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   58 |   *newSize = contador;
+      |   ~~~~~~~~~^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+63f2e5c
